@@ -26,7 +26,7 @@ const Hero = () => {
     <div className="max-xl:pb-10">
       <div className="container">
         <Header />
-        <div className="flex items-center mt-[17px] max-xl:overflow-x-scroll">
+        <div className="flex items-center mt-[17px] max-xl:overflow-x-scroll max-xl:pb-5">
           <div className="flex items-center gap-5 me-[15px]">
             <button
               className="min-w-[49px] h-[29px] text-xs leading-6 border border-solid border-black rounded-[9px] bg-transparent transition-all ease-linear duration-200 hover:bg-black hover:text-white font-normal text-darkBlack"
@@ -63,7 +63,7 @@ const Hero = () => {
             </p>
           ))}
         </div>
-        <div className="w-full max-w-[1141px] mx-auto rounded-[20px] bg-darkBlack h-[347px] relative mt-[43px] max-lg:h-full">
+        <div className="w-full max-w-[1141px] mx-auto rounded-[20px] bg-darkBlack h-[347px] relative mt-[43px] max-lg:h-full max-lg:mt-7">
           <div className="flex justify-between max-lg:flex-wrap">
             <div className="flex flex-col ps-[48px] pt-[48px] max-xl:ps-8 max-xl:pt-8 max-md:ps-5 max-md:pt-5">
               <h1 className="text-5xl max-lg:text-4xl max-md:text-3xl font-bold leading-[58.51px] text-[#FAFAFF] uppercase">
@@ -84,7 +84,7 @@ const Hero = () => {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center gap-6 lg:hidden">
+              <div className="flex items-center gap-6 lg:hidden mt-5">
                 <img
                   src="/assets/images/png/billie-eillish-img.png"
                   alt="user-img"
