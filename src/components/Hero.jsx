@@ -29,7 +29,7 @@ const Hero = () => {
   useEffect(() => {
     const heading = getHeading();
     if (heading) {
-      navigate(`?${heading}`);
+      navigate(`?${heading.toLowerCase()}`);
     } else {
       console.log("Invalid heading value");
     }
@@ -40,30 +40,37 @@ const Hero = () => {
       <div className="container">
         <Header />
         <div className="flex items-center mt-[17px] max-xl:overflow-x-scroll max-xl:pb-5">
-          <div className="flex items-center gap-5 me-[15px]">
-            {BUTTONS_LIST.map((category) => (
+          <div className="flex items-center gap-[5px] me-[15px]">
+            {BUTTONS_LIST.map((item, category) => (
               <button
                 key={category}
-                className={`min-w-[49px] h-[29px] text-xs justify-center leading-6 border flex items-center border-solid border-black rounded-[9px] transition-all ease-linear duration-200 ${
-                  selectedCategory === category
+                className={`${
+                  category === 1
+                    ? "min-w-[47px]"
+                    : category === 2
+                    ? "min-w-[54px]"
+                    : category === 3
+                    ? "min-w-[64px] flex items-center hover:bg-!transparent text-!darkBlack gap-2"
+                    : "min-w-[43px]"
+                } h-[29px] transition-all ease-linear duration-200 text-xs justify-center leading-6 border flex items-center border-solid border-black rounded-[9px] ${
+                  selectedCategory === item
                     ? "bg-darkBlack text-white"
-                    : "hover:bg-black hover:text-white"
+                    : ""
                 } font-normal text-darkBlack`}
-                onClick={() => handleCategoryClick(category)}
+                onClick={() => handleCategoryClick(item)}
               >
-                {category} {category === "" && <DownArrow />}
+                {item} {item === "More" && <DownArrow />}
               </button>
             ))}
           </div>
 
-         
           {ALPHABET_LIST.map((obj, i) => (
             <p
               key={i}
-              className={`size-[29px] max-xl:overflow-x-scroll min-w-[29px] text-xs hover:text-[#FAFAFF] cursor-pointer font-medium leading-[18px] rounded-full flex items-center justify-center transition-all ease-linear duration-200 ${
+              className={`size-[29px] max-xl:overflow-x-scroll min-w-[29px] text-xs hover:text-lightWhite cursor-pointer font-medium leading-[18px] rounded-full flex items-center justify-center transition-all ease-linear duration-200 ${
                 selectedAlphabets.includes(obj)
                   ? "bg-black text-white"
-                  : "hover:bg-black text-darkBlack"
+                  : ""
               }`}
               onClick={() => handleAlphabetClick(obj)}
             >
@@ -72,11 +79,10 @@ const Hero = () => {
           ))}
         </div>
 
-       
         <div className="w-full max-w-[1141px] mx-auto rounded-[20px] bg-darkBlack h-[347px] relative mt-[43px] max-lg:h-full max-lg:mt-7">
           <div className="flex justify-between max-lg:flex-wrap">
             <div className="flex flex-col ps-[48px] pt-[48px] max-xl:ps-8 max-xl:pt-8 max-md:ps-5 max-md:pt-5">
-              <h1 className="text-5xl max-lg:text-4xl max-md:text-3xl font-bold leading-[58.51px] text-[#FAFAFF] uppercase montseret-font">
+              <h1 className="text-5xl max-lg:text-4xl max-md:text-3xl font-bold leading-[58.51px] text-lightWhite uppercase montseret-font">
                 {getHeading()}
               </h1>
               <div className="flex items-center gap-6 absolute bottom-[-58px] max-xl:bottom-0 max-lg:hidden">
@@ -89,7 +95,7 @@ const Hero = () => {
                   <h3 className="text-white text-[32px] font-semibold leading-[42px]">
                     Billie Eilish
                     {selectedAlphabets.map((letter, i) => (
-                      <span key={i} className="text-[#FAFAFF] ms-2">
+                      <span key={i} className="text-lightWhite ms-2">
                         {letter}
                       </span>
                     ))}
@@ -118,7 +124,7 @@ const Hero = () => {
             <img
               src="/assets/images/png/billie-eillish-second-img.png"
               alt="billie-eillish"
-              className="py-[43px] pe-[43px] max-lg:p-10 max-md:p-6 max-sm:p-4 max-lg:mx-auto pointer-events-none"
+              className="py-[43px] pe-[43px] max-lg:p-10 max-md:p-6 max-sm:p-5 max-lg:mx-auto pointer-events-none"
             />
           </div>
         </div>
