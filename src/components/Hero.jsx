@@ -11,7 +11,7 @@ const Hero = () => {
 
   const handleAlphabetClick = (letter) => {
     setSelectedAlphabets([letter]);
-    navigate(`?letter=${letter.toLowerCase()}`);
+    navigate(`?${letter.toLowerCase()}`);
   };
 
   const handleCategoryClick = (category) => {
@@ -29,7 +29,7 @@ const Hero = () => {
   useEffect(() => {
     const heading = getHeading();
     if (heading) {
-      navigate(`?heading=${heading}`);
+      navigate(`?${heading}`);
     } else {
       console.log("Invalid heading value");
     }

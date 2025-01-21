@@ -15,7 +15,7 @@ const Header = () => {
         <input
           type="text"
           placeholder="What do you feel like listening to right now ?"
-          className=" placeholder:text-sm text-sm font-normal placeholder:font-normal leading-6 placeholder:left-6 placeholder:text-lightGray outline-none w-full"
+          className=" placeholder:text-sm text-sm font-normal placeholder:font-normal leading-6 bg-transparent placeholder:left-6 placeholder:text-lightGray outline-none w-full"
         />
         <p className="flex items-center justify-center size-[39px] min-w-[39px] rounded-full bg-black cursor-pointer my-[6px]">
           <SearchIcon />
@@ -33,7 +33,7 @@ const Header = () => {
         <input
           type="text"
           placeholder="What do you feel like listening to right now ?"
-          className=" placeholder:text-sm text-sm font-normal placeholder:font-normal leading-6 placeholder:left-6 placeholder:text-lightGray outline-none w-full max-md:text-xs"
+          className=" placeholder:text-sm text-sm font-normal bg-transparent placeholder:font-normal leading-6 placeholder:left-6 placeholder:text-lightGray outline-none w-full max-md:text-xs"
         />
         <p className="flex items-center justify-center h-[39px] min-w-[39px] rounded-full bg-darkBlack cursor-pointer my-[6px]">
           <SearchIcon />
