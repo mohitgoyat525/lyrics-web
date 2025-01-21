@@ -13,7 +13,13 @@ module.exports = {
         "2xl": "1140px",
       },
     },
-    extend: {},
+    extend: {
+      colors: {
+        lightGray: "#333333",
+        offBlue: "#DBDBF3",
+        darkBlack: "#14191C",
+      },
+    },
   },
   plugins: [],
 };

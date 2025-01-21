@@ -1,5 +1,5 @@
-import React from 'react'
-import { SearchIcon } from '../utils/icons';
+import React from "react";
+import { SearchIcon } from "../utils/icons";
 
 const Header = () => {
   return (
@@ -11,36 +11,36 @@ const Header = () => {
           className="ps-[38px] max-md:ps-6"
         />
       </a>
-      <div className=" max-md:hidden flex items-center rounded-full w-full max-w-[650px] justify-between border border-solid border-[#DBDBF3] ps-[30px] pe-2 max-lg:ps-2">
+      <div className=" max-md:hidden flex items-center rounded-full w-full max-w-[650px] justify-between border border-solid border-offBlue ps-[30px] pe-2 max-lg:ps-2">
         <input
           type="text"
           placeholder="What do you feel like listening to right now ?"
-          className=" placeholder:text-sm text-sm font-normal placeholder:font-normal leading-6 placeholder:left-6 placeholder:text-[#333333] outline-none w-full"
+          className=" placeholder:text-sm text-sm font-normal placeholder:font-normal leading-6 placeholder:left-6 placeholder:text-lightGray outline-none w-full"
         />
         <p className="flex items-center justify-center size-[39px] rounded-full bg-black cursor-pointer my-[6px]">
           <SearchIcon />
         </p>
       </div>
       <div className="flex items-center gap-5">
-        <button className="text-[#14191C] text-sm leading-6 font-normal">
+        <button className="text-darkBlack text-sm leading-6 font-normal">
           Login
         </button>
-        <button className="me-3 bg-[#14191C] text-white font-medium text-sm leading-6 rounded-[9px] w-full min-w-[105px] max-sm:min-w-[85px] py-[9px] h-[43px]">
+        <button className="me-3 bg-darkBlack text-white font-medium text-sm leading-6 rounded-[9px] w-full min-w-[105px] max-sm:min-w-[85px] py-[9px] h-[43px]">
           Sign Up
         </button>
       </div>
-      <div className="md:hidden flex items-center rounded-full w-full max-w-[650px] justify-between border border-solid border-[#DBDBF3] ps-[30px] pe-2 max-md:ps-2">
+      <div className="md:hidden flex mx-3 items-center rounded-full w-full max-w-[650px] justify-between border border-solid border-offBlue ps-[30px] pe-2 max-md:ps-2">
         <input
           type="text"
           placeholder="What do you feel like listening to right now ?"
-          className=" placeholder:text-sm text-sm font-normal placeholder:font-normal leading-6 placeholder:left-6 placeholder:text-[#333333] outline-none w-full max-md:text-xs"
+          className=" placeholder:text-sm text-sm font-normal placeholder:font-normal leading-6 placeholder:left-6 placeholder:text-lightGray outline-none w-full max-md:text-xs"
         />
-        <p className="flex items-center justify-center h-[39px] min-w-[39px] rounded-full bg-black cursor-pointer my-[6px]">
+        <p className="flex items-center justify-center h-[39px] min-w-[39px] rounded-full bg-darkBlack cursor-pointer my-[6px]">
           <SearchIcon />
         </p>
       </div>
     </nav>
   );
-}
+};
 
-export default Header
+export default Header;
