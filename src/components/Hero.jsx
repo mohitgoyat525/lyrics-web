@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../common/Header";
 import { DownArrow } from "../utils/icons";
 import { ALPHABET_LIST } from "../utils/helper";
@@ -6,13 +6,17 @@ import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedAlphabets, setSelectedAlphabets] = useState([]);
   const navigate = useNavigate();
 
   const handleAlphabetClick = (letter) => {
+    setSelectedAlphabets([letter]);
     navigate(`?letter=${letter.toLowerCase()}`);
   };
 
-  const handleCategoryClick = (category) => setSelectedCategory(category);
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+  };
 
   const getHeading = () =>
     ({
@@ -21,6 +25,15 @@ const Hero = () => {
       All: "Hit Me Hard and Soft",
       More: "More Music Coming Soon",
     }[selectedCategory] || "Hit Me Hard and Soft");
+
+  useEffect(() => {
+    const heading = getHeading();
+    if (heading) {
+      navigate(`?heading=${heading}`);
+    } else {
+      console.log("Invalid heading value");
+    }
+  }, [selectedCategory]);
 
   return (
     <div className="max-xl:pb-10">
@@ -78,6 +91,11 @@ const Hero = () => {
                 <div className="flex flex-col">
                   <h3 className="text-white text-[32px] font-semibold leading-[42px]">
                     Billie Eilish
+                    {selectedAlphabets.map((letter, i) => (
+                      <span key={i} className="text-[#FAFAFF]">
+                        {letter}
+                      </span>
+                    ))}
                   </h3>
                   <p className="text-base text-[#CECECE] font-medium leading-[19.5px]">
                     Released May 17, 2024
