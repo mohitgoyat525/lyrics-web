@@ -9,6 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Hero />} />
+          <Route path="/:category" element={<Hero />} />
         </Routes>
       </BrowserRouter>
     </>

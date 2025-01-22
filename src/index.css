@@ -17,3 +17,7 @@ body{
 .montseret-font{
     font-family: "Montserrat", serif;
 }
+
+.arrow-span svg path:hover{
+    fill: whitesmoke !important;
+}
