@@ -109,7 +109,7 @@ const SoundsList = () => {
             </div>
           </div>
         </div>
-        <div className="border border-solid border-offBlue w-full my-[45px]"></div>
+        <div className="border border-solid border-offBlue w-full mt-[45px]"></div>
       </div>
     );
 };

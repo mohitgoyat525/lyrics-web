@@ -51,3 +51,61 @@ export const SONGS_LIST = [
     playedTime: "526,448,261",
   },
 ];
+
+export const FOOTER_LIST = [
+  {
+    heading: "Lyrics Web",
+    songs: "Songs",
+    artist: "Artist",
+  },
+  {
+    link: "Home",
+    aboutSong: "Top Songs",
+    aboutArtist: "Top Artists",
+  },
+  {
+    link: "About Us",
+    aboutSong: "Releases",
+    aboutArtist: "Top Albums",
+  },
+  {
+    link: "Help",
+    aboutSong: "Add a new song",
+    aboutArtist: "Add a new song",
+  },
+  {
+    link: "Contact us",
+    aboutSong: "Your Playlist",
+    aboutArtist: "Latest News",
+  },
+  {
+    link: "Press",
+  },
+];
+
+export const FOOTER_LIST_TWO = [
+  {
+    title: "Lyrics Web",
+    link: "Songs",
+    image: "/assets/images/png/facebook-logo.png",
+    alt: "facebook-logo",
+  },
+  {
+    title: "Home",
+    link: "Top Songs",
+    image: "/assets/images/png/instagram-logo.png",
+    alt: "instagram-logo",
+  },
+  {
+    title: "About Us",
+    link: "Releases",
+    image: "/assets/images/png/youtube-logo.png",
+    alt: "youtube-logo",
+  },
+  {
+    title: "Help",
+    link: "Add a new song",
+    image: "/assets/images/png/pinterest-logo.png",
+    alt: "pinterest-logo",
+  },
+];
