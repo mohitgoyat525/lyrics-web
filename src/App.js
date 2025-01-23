@@ -1,15 +1,15 @@
 
 import { BrowserRouter, Routes,Route } from 'react-router-dom';
-import Hero from './components/Hero';
 import './index.css';
+import Home from './view/Home';
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Hero />} />
-          <Route path="/:category" element={<Hero />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/:category" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </>
