@@ -16,12 +16,12 @@ const Alphabets = () => {
 
     return (
       <div>
-        <div className="container my-[45px] max-lg:overflow-auto">
+        <div className="container my-[45px] max-lg:overflow-auto max-lg:my-10 max-md:my-5 max-lg:pb-5">
           <div className="flex items-center justify-center">
             {ALPHABET_LIST.map((obj, i) => (
               <div
                 key={i}
-                className={`min-w-[39px] rounded-full flex items-center h-[39px] justify-center cursor-pointer 
+                className={`min-w-[39px] rounded-full flex items-center h-[39px] justify-center cursor-pointer transition-all ease-linear duration-300 
               ${
                 selectedAlphabet === obj
                   ? "bg-black text-white"
@@ -34,7 +34,7 @@ const Alphabets = () => {
             ))}
           </div>
         </div>
-        <div className="border border-solid border-offBlue w-full "></div>
+        <div className="border border-solid border-offBlue w-full mb-[67px] max-xl:mb-14 max-md:mb-8 max-sm:mb-5"></div>
       </div>
     );
 };

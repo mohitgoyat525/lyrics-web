@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-wrap w-full mx-auto">
           <div className="lg:w-8/12 w-full flex flex-col items-center lg:items-start mt-[62px]">
             <div className="lg:max-w-[728px] max-w-3xl w-full">
-              <div className="flex flex-wrap xl:mb-[37px] lg:mb-8 md:mb-7 sm:mb-6 mb-5 w-full max-lg:items-center max-lg:justify-center">
+              <div className="flex flex-wrap xl:mb-[37px] lg:mb-8 md:mb-7 sm:mb-6 mb-5 w-full max-lg:items-center max-lg:justify-center max-sm:justify-between">
                 <div className="lg:w-4/12 w-3/12 font-semibold !leading-[174%] text-xs lg:text-sm">
                   {FOOTER_LIST[0].heading}
                 </div>
@@ -25,11 +25,11 @@ const Footer = () => {
                 {FOOTER_LIST.slice(1).map((song, index) => (
                   <div
                     key={index}
-                    className="flex flex-wrap w-full max-lg:items-center max-lg:justify-center"
+                    className="flex flex-wrap w-full max-lg:items-center max-lg:justify-center max-sm:justify-between"
                   >
                     <div className="lg:w-4/12 w-3/12 flex items-center">
                       <Link>
-                        <p className="lg:text-sm text-xs text-darkBlack !leading-[171.43%]">
+                        <p className="lg:text-sm text-xs text-darkBlack !leading-[171.43%] whitespace-nowrap max-sm:text-[10px]">
                           {song.link}
                         </p>
                       </Link>
@@ -37,7 +37,7 @@ const Footer = () => {
                     <div className="lg:w-4/12 w-3/12 flex justify-center items-center lg:flex">
                       <div className="text-start w-full">
                         <Link to="/">
-                          <p className="lg:text-sm text-xs !leading-[200%] text-darkBlack">
+                          <p className="lg:text-sm text-xs !leading-[200%] text-darkBlack whitespace-nowrap">
                             {song.aboutSong}
                           </p>
                         </Link>
@@ -45,7 +45,7 @@ const Footer = () => {
                     </div>
                     <div className="lg:w-4/12 w-3/12 flex items-center">
                       <Link to="/">
-                        <p className="lg:text-sm text-xs !leading-[200%] text-darkBlack">
+                        <p className="lg:text-sm text-xs !leading-[200%] text-darkBlack whitespace-nowrap">
                           {song.aboutArtist}
                         </p>
                       </Link>
@@ -57,21 +57,21 @@ const Footer = () => {
           </div>
 
           <div className="lg:w-4/12 w-full flex justify-center lg:justify-start mt-8">
-            <div className="lg:ps-10 pt-10 max-w-[312px] w-full">
+            <div className="max-w-[312px] w-full">
               <h4 className="font-semibold lg:text-sm text-xs text-darkBlack lg:mb-[26px] md:mb-5 mb-4">
                 Follow us
               </h4>
-              {FOOTER_LIST_TWO.map((item, index) => (
+              {FOOTER_LIST_TWO.map((item, i) => (
                 <div
-                  key={index}
-                  className={`flex bg-white rounded-[10px] justify-between items-center mb-[14px] py-3 ps-6 pe-[14px] ${
-                    index === 3 ? "mb-0" : ""
+                  key={i}
+                  className={`flex bg-white rounded-[10px] justify-between items-center mb-[14px] py-3 ps-6 pe-[14px] cursor-pointer ${
+                    i === 3 ? "mb-0" : ""
                   }`}
                 >
                   <h3 className="!leading-[174%] lg:text-sm text-xs">
                     {item.title}
                   </h3>
-                  <Link to={item.link}>
+                  <Link target="_blank" to={item.link}>
                     <img
                       className="max-w-[30px] h-auto"
                       src={item.image}
