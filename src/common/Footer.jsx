@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
-      <div className="container w-full max-xl:px-4 lg:mb-[89px] mb-16">
+      <div className="container w-full max-xl:px-4 lg:mb-[89px] mb-16 max-md:mb-10 max-sm:mb-7">
         <div className="flex flex-wrap w-full mx-auto">
           <div className="lg:w-8/12 w-full flex flex-col items-center lg:items-start mt-[62px]">
             <div className="lg:max-w-[728px] max-w-3xl w-full">
@@ -29,7 +29,7 @@ const Footer = () => {
                   >
                     <div className="lg:w-4/12 w-3/12 flex items-center">
                       <Link>
-                        <p className="lg:text-sm text-xs text-darkBlack !leading-[171.43%] whitespace-nowrap max-sm:text-[10px]">
+                        <p className="lg:text-sm text-xs text-darkBlack font-normal leading-6 whitespace-nowrap">
                           {song.link}
                         </p>
                       </Link>
@@ -37,7 +37,7 @@ const Footer = () => {
                     <div className="lg:w-4/12 w-3/12 flex justify-center items-center lg:flex">
                       <div className="text-start w-full">
                         <Link to="/">
-                          <p className="lg:text-sm text-xs !leading-[200%] text-darkBlack whitespace-nowrap">
+                          <p className="lg:text-sm text-xs font-normal leading-6 text-darkBlack whitespace-nowrap">
                             {song.aboutSong}
                           </p>
                         </Link>
@@ -45,7 +45,7 @@ const Footer = () => {
                     </div>
                     <div className="lg:w-4/12 w-3/12 flex items-center">
                       <Link to="/">
-                        <p className="lg:text-sm text-xs !leading-[200%] text-darkBlack whitespace-nowrap">
+                        <p className="lg:text-sm text-xs font-normal leading-6 text-darkBlack whitespace-nowrap ">
                           {song.aboutArtist}
                         </p>
                       </Link>
@@ -68,7 +68,7 @@ const Footer = () => {
                     i === 3 ? "mb-0" : ""
                   }`}
                 >
-                  <h3 className="!leading-[174%] lg:text-sm text-xs">
+                  <h3 className="!leading-[174%] lg:text-sm text-xs font-semibold">
                     {item.title}
                   </h3>
                   <Link target="_blank" to={item.link}>
@@ -88,15 +88,15 @@ const Footer = () => {
       <div className="border-t border-off-white w-full xl:py-[30px] lg:py-6 py-5 flex justify-center items-center">
         <div className="max-w-[1140px] mx-auto w-full">
           <div className="flex flex-wrap w-full justify-between md:gap-5 gap-3">
-            <p className="text-darkBlack lg:text-sm text-xs text-center max-lg:mx-auto max-lg:px-6">
+            <p className="text-darkBlack lg:text-sm text-xs text-center max-lg:mx-auto max-lg:px-6 font-normal">
               All rights reserved to Global Media Holdings Ltd.{" "}
               {new Date().getFullYear()}
             </p>
             <div className="flex lg:gap-10 gap-7 max-lg:px-6 max-lg:mx-auto">
-              <Link className="text-darkBlack lg:text-sm text-xs" to="/">
+              <Link className="text-darkBlack lg:text-sm text-xs font-normal" to="/">
                 Privacy Policy
               </Link>
-              <Link className="text-darkBlack lg:text-sm text-xs" to="/">
+              <Link className="text-darkBlack lg:text-sm text-xs font-normal" to="/">
                 Terms of Use
               </Link>
             </div>

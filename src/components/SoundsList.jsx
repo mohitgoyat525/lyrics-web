@@ -20,7 +20,7 @@ const SoundsList = () => {
   };
 
     return (
-      <div className="">
+      <div>
         <div className="container">
           <h2 className="text-[#2E2F37] font-semibold text-5xl leading-[58.85px] pt-[65px]">
             Songs

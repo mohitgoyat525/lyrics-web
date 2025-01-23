@@ -19,9 +19,9 @@ const Alphabets = () => {
         <div className="container my-[45px] max-lg:overflow-auto max-lg:my-10 max-md:my-5 max-lg:pb-5">
           <div className="flex items-center justify-center">
             {ALPHABET_LIST.map((obj, i) => (
-              <div
+              <p
                 key={i}
-                className={`min-w-[39px] rounded-full flex items-center h-[39px] justify-center cursor-pointer transition-all ease-linear duration-300 
+                className={`min-w-[39px] rounded-full flex text-xs hover:bg-black hover:text-white font-normal leading-[18px] items-center h-[39px] justify-center cursor-pointer transition-all ease-linear duration-300 
               ${
                 selectedAlphabet === obj
                   ? "bg-black text-white"
@@ -29,8 +29,8 @@ const Alphabets = () => {
               }`}
                 onClick={() => handleClick(obj)}
               >
-                <p>{obj}</p>
-              </div>
+                {obj}
+              </p>
             ))}
           </div>
         </div>
