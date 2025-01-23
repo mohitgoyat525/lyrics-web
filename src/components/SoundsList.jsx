@@ -22,7 +22,7 @@ const SoundsList = () => {
     return (
       <div>
         <div className="container">
-          <h2 className="text-[#2E2F37] font-semibold text-5xl leading-[58.85px] pt-[65px]">
+          <h2 className="text-lightBlack font-semibold text-5xl leading-[58.85px] pt-[65px]">
             Songs
           </h2>
           <div className="flex items-start justify-between w-full gap-[58px] max-lg:flex-col pt-7">
@@ -64,7 +64,7 @@ const SoundsList = () => {
               ))}
             </div>
 
-            <div className="bg-darkSkyBlue relative min-w-[300px] h-[600px] rounded-[20px] flex items-center justify-center text-center">
+            <div className="">
               <input
                 type="file"
                 id="my-input"
@@ -74,7 +74,7 @@ const SoundsList = () => {
               />
               <label
                 htmlFor="my-input"
-                className={`cursor-pointer text-white ${
+                className={`cursor-pointer text-white flex items-center justify-center text-center bg-darkSkyBlue relative min-w-[300px] h-[600px] rounded-[20px] ${
                   showImage ? "hidden" : "block"
                 }`}
               >

@@ -46,6 +46,12 @@ const Hero = () => {
       : "px-3 py-[2px] text-xs leading-6 border border-solid border-black rounded-[9px] bg-transparent text-darkBlack font-normal transition-all ease-linear duration-200 hover:bg-black hover:text-white";
   };
 
+  const getAlphabetButtonClass = (letter) => {
+    return artistName === letter.toUpperCase()
+      ? "size-[29px] max-xl:overflow-x-scroll min-w-[29px] text-xs hover:text-lightWhite cursor-pointer font-medium leading-[18px] rounded-full flex items-center justify-center bg-black text-white transition-all ease-linear duration-200"
+      : "size-[29px] max-xl:overflow-x-scroll min-w-[29px] text-xs hover:text-lightWhite cursor-pointer font-medium leading-[18px] rounded-full flex items-center justify-center bg-transparent text-darkBlack transition-all ease-linear duration-200 hover:bg-black";
+  };
+
   return (
     <div className="max-xl:pb-10">
       <div className="container">
@@ -79,7 +85,7 @@ const Hero = () => {
           </div>
           {ALPHABET_LIST.map((obj, i) => (
             <p
-              className="size-[29px] max-xl:overflow-x-scroll min-w-[29px] text-xs hover:text-lightWhite cursor-pointer font-medium leading-[18px] rounded-full flex items-center justify-center bg-transparent transition-all ease-linear duration-200 hover:bg-black text-darkBlack"
+              className={getAlphabetButtonClass(obj)}
               key={i}
               onClick={() => handleAlphabetClick(obj)}
             >
