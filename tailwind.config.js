@@ -10,20 +10,15 @@ module.exports = {
         md: "768px",
         lg: "992px",
         xl: "1025px",
-        "2xl": "1140px",
+        "2xl": "1320px",
       },
     },
     extend: {
       colors: {
-        lightGray: "#333333",
-        offBlue: "#DBDBF3",
-        darkBlack: "#14191C",
-        offWhite: "#CECECE",
-        lightWhite: "#FAFAFF",
-        offGray: "#9F9DAB",
-        darkSkyBlue: "#007BFF",
-        lightBlack: "#2E2F37",
       },
+      backgroundImage: {
+        heroBg: "url('/public/assets/images/png/hero-bg-img.png')",
+      }
     },
   },
   plugins: [],

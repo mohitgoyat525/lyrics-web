@@ -1,54 +1,87 @@
-import React from "react";
-import { SearchIcon } from "../utils/icons";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+import { HEADER_LIST } from '../utils/helper'
+
 const Header = () => {
-    const handleIconClick = () => {
-      
-      const inputElement = document.querySelector("input");
-      inputElement.focus();
-    };
+      const [isOpen, setIsOpen] = useState(false);
+      const handler = () => {
+        setIsOpen(!isOpen);
+      };
+      useEffect(() => {
+        const handleOverflow = () => {
+          if (isOpen && window.innerWidth < 1025) {
+            document.body.classList.add("overflow-hidden");
+          } else {
+            document.body.classList.remove("overflow-hidden");
+          }
+        };
+
+        handleOverflow();
+        window.addEventListener("resize", handleOverflow);
+
+        return () => {
+          document.body.classList.remove("overflow-hidden");
+          window.removeEventListener("resize", handleOverflow);
+        };
+      }, [isOpen]);
+
   return (
-    <nav className="w-full max-w-[1128px] header-shadow rounded-[20px] flex items-center justify-between py-[10px] max-md:flex-wrap max-xl:gap-6 max-sm:gap-2 mt-[10px]">
+    <nav className="flex items-center justify-between">
       <Link to="/">
         <img
-          src="/assets/images/svg/header-logo.svg"
+          src="/assets/images/png/header-logo.png"
           alt="logo"
-          className="ps-[38px] max-md:ps-6 max-xl:min-w-[109px] max-xl:h-14 max-md:min-w-20 max-md:h-5"
+          className="w-full max-w-[286px]"
         />
       </Link>
-      <div className=" max-md:hidden flex items-center rounded-full w-full max-w-[650px] justify-between border border-solid border-offBlue ps-[30px] pe-2 max-lg:ps-2">
-        <input
-          type="text"
-          placeholder="What do you feel like listening to right now ?"
-          className=" placeholder:text-sm text-sm font-normal placeholder:font-normal leading-6 bg-transparent placeholder:left-6 placeholder:text-lightGray outline-none w-full pe-4"
-        />
-        <p
-          onClick={handleIconClick}
-          className="flex items-center justify-center size-[39px] min-w-[39px] rounded-full bg-black cursor-pointer my-[6px]"
+      <div>
+        <ul
+          className={`flex items-center gap-10  max-xl:flex-col max-xl:justify-center max-xl:fixed max-xl:top-0 max-xl:left-0 max-xl:w-full max-xl:h-screen max-xl:bg-black max-xl:z-[90] transition-transform duration-300 ${
+            isOpen ? "max-xl:-translate-y-0" : "max-xl:-translate-y-full"
+          }`}
         >
-          <SearchIcon />
-        </p>
+          {HEADER_LIST.map((obj, i) => (
+            <li
+              className="leading-[22px] text-[22px] font-bold text-white"
+              key={i}
+            >
+              <Link>{obj}</Link>
+            </li>
+          ))}
+          <li>
+            <button className="hero-btn min-w-[181px] text-white font-normal text-2xl leading-6 h-[53px] flex items-center justify-center rounded-full gap-2">
+              <img
+                src="/assets/images/png/btn-discord-icon.png"
+                alt="btn"
+                className="w-full max-w-[22px]"
+              />
+              Discord
+            </button>
+          </li>
+        </ul>
       </div>
-      <div className="flex items-center gap-5">
-        <button className="text-darkBlack text-sm leading-6 font-normal transition-all ease-linear duration-300 hover:scale-110">
-          Login
-        </button>
-        <button className="me-3 bg-darkBlack border border-solid border-transparent hover:bg-white hover:text-darkBlack transition-all ease-linear duration-300 hover:border-darkBlack text-white font-medium text-sm leading-6 rounded-[9px] w-full min-w-[105px] max-sm:min-w-[85px] py-[9px] h-[43px]">
-          Sign Up
-        </button>
-      </div>
-      <div className="md:hidden flex mx-3 items-center rounded-full w-full max-w-[650px] justify-between border border-solid border-offBlue ps-[30px] pe-2 max-md:ps-2">
-        <input
-          type="text"
-          placeholder="What do you feel like listening to right now ?"
-          className=" placeholder:text-sm text-sm font-normal bg-transparent pe-4 placeholder:font-normal leading-6 placeholder:left-6 placeholder:text-lightGray outline-none w-full max-md:text-xs"
-        />
-        <p className="flex items-center justify-center h-[39px] min-w-[39px] rounded-full bg-darkBlack cursor-pointer my-[6px]">
-          <SearchIcon />
-        </p>
-      </div>
+      <button
+        onClick={handler}
+        className="flex flex-col justify-center items-center z-[100] gap-1 xl:hidden relative size-6"
+      >
+        <span
+          className={`h-1 w-full bg-white rounded transition-all duration-300 ${
+            isOpen ? "rotate-45 translate-y-[8px]" : ""
+          }`}
+        ></span>
+        <span
+          className={`h-1 w-full bg-white rounded transition-all duration-300 ${
+            isOpen ? "opacity-0" : ""
+          }`}
+        ></span>
+        <span
+          className={`h-1 w-full bg-white rounded transition-all duration-300 ${
+            isOpen ? "-rotate-45 -translate-y-[8px]" : ""
+          }`}
+        ></span>
+      </button>
     </nav>
   );
-};
+}
 
-export default Header;
+export default Header
