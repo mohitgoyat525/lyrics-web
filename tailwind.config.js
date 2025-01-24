@@ -14,11 +14,15 @@ module.exports = {
       },
     },
     extend: {
-      colors: {
-      },
+      colors: {},
       backgroundImage: {
         heroBg: "url('/public/assets/images/png/hero-bg-img.png')",
-      }
+        nftBg: "url('/public/assets/images/png/nft-bg-img.png')",
+        gildedBg: "url('/public/assets/images/png/gilded-bg-img-three.png')"
+      },
+      fontFamily: {
+        josefin: ["Josefin Sans", "sans-serif"],
+      },
     },
   },
   plugins: [],

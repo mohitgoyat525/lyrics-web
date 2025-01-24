@@ -40,8 +40,7 @@ const Hero = () => {
       const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
       setTimeLeft({ days, hours, minutes, seconds });
     };
-    const intervalId = setInterval(calculateTimeLeft, 1000);
-    return () => clearInterval(intervalId);
+   
   }, []);
 
   return (
@@ -53,22 +52,27 @@ const Hero = () => {
       </div>
       <div className="container">
         <h1 className="text-white font-normal text-[72px] max-xl:text-6xl max-lg:text-5xl max-md:text-4xl leading-[91.8px] max-w-[1059px] mx-auto text-center pt-[254px] max-xl:pt-28 max-lg:pt-20 max-md:pt-16">
-          There are games... And then there are{" "}
+          There are games... And then there are
           <span className="text-[#1BABFE]">Gilded</span> Games
         </h1>
-        <p className="font-semibold leading-[127%] text-4xl text-white text-center timer">
-          <span className="text-[#1BABFE]">{timeLeft.days}d</span> :
+        <p className="font-semibold leading-[127%] text-4xl text-white text-center timer font-josefin">
+          <span className="text-[#1BABFE]">{timeLeft.days}d</span>{" "}
+          <span className="pr-2">:</span>
           {timeLeft.hours}hr : {timeLeft.minutes}min : {timeLeft.seconds}sec
         </p>
-        <p className="font-semibold leading-[127%] text-lg text-white text-center">
+        <p className="font-semibold leading-[127%] text-lg text-white text-center font-josefin">
           Remaining Presale Time
         </p>
         <div className=" flex items-center gap-6 justify-center mt-[22px] pb-[129px] max-xl:pb-24 max-lg:pb-20 max-md:pb-16">
-          <button className="hero-btn min-w-[178px] text-white font-normal text-2xl leading-6 h-[52px] flex items-center justify-center rounded-full gap-2">
-            <img src="/assets/images/png/presale-btn-icon.png" alt="icon" className="w-full max-w-[22px]"/>
+          <button className="hero-btn font-josefin min-w-[178px] max-md:min-w-[160px] max-md:text-xl text-white font-normal text-2xl leading-6 h-[52px] flex items-center justify-center rounded-full gap-2">
+            <img
+              src="/assets/images/png/presale-btn-icon.png"
+              alt="icon"
+              className="w-full max-w-[22px]"
+            />
             Presale
           </button>
-          <button className="second-btn border border-solid border-white min-w-[166px] text-white font-normal text-2xl leading-6 h-[52px] flex items-center justify-center rounded-full gap-2">
+          <button className="second-btn font-josefin border border-solid max-md:min-w-[160px] max-md:text-xl border-white min-w-[166px] text-white font-normal text-2xl leading-6 h-[52px] flex items-center justify-center rounded-full gap-2">
             Join Now
           </button>
         </div>

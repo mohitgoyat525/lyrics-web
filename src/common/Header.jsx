@@ -42,14 +42,14 @@ const Header = () => {
         >
           {HEADER_LIST.map((obj, i) => (
             <li
-              className="leading-[22px] text-[22px] font-bold text-white"
+              className="font-josefin leading-[22px] text-[22px] font-bold text-white transition-all ease-linear duration-200 hover:text-[#1BABFE]"
               key={i}
             >
               <Link>{obj}</Link>
             </li>
           ))}
           <li>
-            <button className="hero-btn min-w-[181px] text-white font-normal text-2xl leading-6 h-[53px] flex items-center justify-center rounded-full gap-2">
+            <button className="hero-btn font-josefin min-w-[181px] text-white font-normal text-2xl leading-6 h-[53px] flex items-center justify-center rounded-full gap-2 transition-all ease-linear duration-200">
               <img
                 src="/assets/images/png/btn-discord-icon.png"
                 alt="btn"
