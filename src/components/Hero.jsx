@@ -8,6 +8,7 @@ const Hero = () => {
   const { category = "all" } = useParams();
   const [selectedCategory, setSelectedCategory] = useState(category);
   const [artistName, setArtistName] = useState("");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -30,6 +31,10 @@ const Hero = () => {
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
     navigate(`/${category.toLowerCase()}`);
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen((prev) => !prev);
   };
 
   const getHeading = () =>
@@ -56,7 +61,7 @@ const Hero = () => {
     <div className="max-xl:pb-10">
       <div className="container">
         <Header />
-        <div className="flex items-center mt-[17px] overflow-x-auto pb-5">
+        <div className="flex items-center mt-[17px] max-xl:overflow-x-auto pb-5">
           <div className="flex items-center gap-[5px] me-[15px]">
             <button
               className={getCategoryButtonClass("all")}
@@ -76,12 +81,33 @@ const Hero = () => {
             >
               Rock
             </button>
-            <button
-              className="flex items-center gap-4 justify-center h-[29px] min-w-[64px] text-xs leading-6 border border-solid border-black rounded-[9px] bg-transparent transition-all ease-linear duration-200 font-normal text-darkBlack"
-              onClick={() => handleCategoryClick("more")}
-            >
-              More <DownArrow />
-            </button>
+            <div className="relative">
+              <div
+                className="flex items-center gap-4 justify-center h-[29px] min-w-[64px] text-xs leading-6 border border-solid border-black rounded-[9px] bg-transparent transition-all ease-linear duration-200 font-normal text-darkBlack"
+                onClick={toggleDropdown}
+              >
+                More <DownArrow />
+              </div>
+
+              
+              {isDropdownOpen && (
+                <div className="absolute z-20 mt-2 bg-white shadow-lg rounded-lg w-[200px]">
+                  <button
+                    className="w-full text-left px-4 py-2 text-sm text-darkBlack hover:bg-gray-200"
+                    onClick={() => handleCategoryClick("more")}
+                  >
+                    More Category 1
+                  </button>
+                  <button
+                    className="w-full text-left px-4 py-2 text-sm text-darkBlack hover:bg-gray-200"
+                    onClick={() => handleCategoryClick("anotherCategory")}
+                  >
+                    More Category 2
+                  </button>
+                
+                </div>
+              )}
+            </div>
           </div>
           {ALPHABET_LIST.map((obj, i) => (
             <p
