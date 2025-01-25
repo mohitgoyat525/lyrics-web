@@ -20,3 +20,9 @@ body{
      font-family: "Poppins", serif;
 }
 
+.border-gardient{
+
+background-image: linear-gradient(90deg, #815CC8 0%, #1BABFE 100%);
+    
+
+}

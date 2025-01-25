@@ -22,11 +22,13 @@ const PlayToEarn = () => {
           alt=""
           className="absolute right-0"
         />
-        <img
-          className="max-w-[1320px] w-full relative z-50"
-          src="./assets/images/webp/gilded-world-img.webp "
-          alt="gilded-world-img"
-        />
+        <div className="border-gardient relative z-50 p-[5px] rounded-[13px] max-w-[1320px]">
+          <img
+            className="max-w-[1310px] w-full  h-[561px] max-xl:h-full rounded-[13px]"
+            src="./assets/images/webp/gilded-world-img.webp "
+            alt="gilded-world-img"
+          />
+        </div>
       </div>
     </div>
   );
