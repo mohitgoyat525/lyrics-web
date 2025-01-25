@@ -55,7 +55,7 @@ const Header = () => {
           <li>
             <button
               onClick={handler}
-              className="hero-btn font-josefin min-w-[181px] text-white font-normal text-2xl leading-6 h-[53px] flex items-center justify-center rounded-full gap-2 transition-all ease-linear duration-200"
+              className="hero-btn hover:scale-95 font-josefin min-w-[181px] text-white font-normal text-2xl leading-6 h-[53px] flex items-center justify-center rounded-full gap-2 transition-all ease-linear duration-200"
             >
               <img
                 src="/assets/images/png/btn-discord-icon.png"

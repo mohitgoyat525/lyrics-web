@@ -64,7 +64,7 @@ const Hero = () => {
           Remaining Presale Time
         </p>
         <div className=" flex items-center gap-6 justify-center mt-[22px] pb-[129px] max-xl:pb-24 max-lg:pb-20 max-md:pb-16">
-          <button className="hero-btn font-josefin min-w-[178px] max-md:min-w-[160px] max-md:text-xl text-white font-normal text-2xl leading-6 h-[52px] flex items-center justify-center rounded-full gap-2">
+          <button className="transition-all ease-linear duration-200 hover:scale-95 hero-btn font-josefin min-w-[178px] max-md:min-w-[160px] max-md:text-xl text-white font-normal text-2xl leading-6 h-[52px] flex items-center justify-center rounded-full gap-2">
             <img
               src="/assets/images/png/presale-btn-icon.png"
               alt="icon"
