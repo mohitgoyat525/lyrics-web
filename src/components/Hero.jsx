@@ -53,10 +53,10 @@ const Hero = () => {
       <div className="container">
         <h1 className="text-white font-normal text-[72px] max-xl:text-6xl max-lg:text-5xl max-md:text-4xl leading-[91.8px] max-w-[1059px] mx-auto text-center pt-[254px] max-xl:pt-28 max-lg:pt-20 max-md:pt-16">
           There are games... And then there are
-          <span className="text-[#1BABFE]">Gilded</span> Games
+          <span className="text-lightSkyBlue">Gilded</span> Games
         </h1>
         <p className="font-semibold leading-[127%] text-4xl text-white text-center timer font-josefin">
-          <span className="text-[#1BABFE]">{timeLeft.days}d</span>{" "}
+          <span className="text-lightSkyBlue">{timeLeft.days}d</span>
           <span className="pr-2">:</span>
           {timeLeft.hours}hr : {timeLeft.minutes}min : {timeLeft.seconds}sec
         </p>

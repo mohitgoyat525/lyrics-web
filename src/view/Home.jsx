@@ -3,6 +3,9 @@ import Hero from '../components/Hero'
 import Nft from '../components/Nft'
 import PlayEarn from '../components/PlayEarn'
 import GildedGames from '../components/GildedGames'
+import GildToken from '../components/GildToken'
+import Uniswap from '../components/Uniswap'
+import PowerdBy from '../components/PowerdBy'
 
 
 const Home = () => {
@@ -11,7 +14,10 @@ const Home = () => {
       <Hero />
       <Nft />
       <PlayEarn />
-      <GildedGames/>
+      <GildedGames />
+      <GildToken />
+      <Uniswap />
+      <PowerdBy/>
     </>
   )
 }

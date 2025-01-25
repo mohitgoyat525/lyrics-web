@@ -1,0 +1,44 @@
+import React from 'react'
+
+const Uniswap = () => {
+    return (
+      <div className="bg-cover bg-center bg-no-repeat bg-uniswapBg max-sm:mt-[345px]">
+        <div className="relative flex items-center h-[885px] max-lg:h-full max-lg:flex-wrap max-w-[1920px] mx-auto max-sm:gap-5">
+          <div className="container">
+            <div>
+              <h2 className="text-5xl font-josefin max-lg:text-4xl max-md:text-3xl max-sm:text-2xl font-bold leading-[61.2px] text-white mb-4">
+                Buy On <span className="text-lightPurple">Uniswap</span>
+              </h2>
+              <ul className="list-disc ml-5">
+                <li className="text-white text-xl font-normal leading-[25px] font-josefin">
+                  100,000+ Airdrop
+                </li>
+                <li className="text-white text-xl font-normal leading-[25px] font-josefin">
+                  NFT $GILD giveaway
+                </li>
+                <li className="text-white text-xl font-normal leading-[25px] font-josefin">
+                  Announcement and Games
+                </li>
+              </ul>
+              <button className="rounded-full transition-all ease-linear duration-300 hover:scale-95 text-white font-josefin gap-2 mt-[41px] justify-center min-w-[170px] h-[53px] hero-btn flex items-center font-normal text-2xl leading-6">
+                <img src="/assets/images/svg/unicorn-img.svg" alt="unicorn" />
+                Buy Now
+              </button>
+            </div>
+          </div>
+          <img
+            src="/assets/images/png/treassure-img.png"
+            alt="treassure"
+            className="w-full max-w-[961px] absolute right-0 max-xl:max-w-[561px] max-lg:hidden"
+          />
+          <img
+            src="/assets/images/png/md-treasure-img.png"
+            alt="treasue"
+            className="lg:hidden w-full max-w-[320px]"
+          />
+        </div>
+      </div>
+    );
+}
+
+export default Uniswap
