@@ -6,7 +6,7 @@ const PlayToEarn = () => {
     <div className="bg-black pb-[110px] max-xl:pb-20 max-lg:pb-16 max-md:pb-10 flex justify-center items-center -mt-1 relative">
       <div className="max-w-[1320px] w-full mx-auto max-xl:px-4">
         <h2 className="font-bold xl:text-5xl lg:text-4xl md:text-3xl text-center lg:mb-4 mb-3 text-2xl text-white font-josefin">
-          Play to <span className="text-lightPurple">Earn</span>
+          Play to <span className="gradient-text">Earn</span>
         </h2>
         <Description
           className="text-center max-w-5xl mx-auto xl:mb-12 lg:mb-10 md:mb-8 mb-5"
