@@ -8,12 +8,12 @@ const GildedGames = () => {
             <img
               src="/assets/images/png/semicolon-top.png"
               alt="semicolon"
-              className="max-w-[102px] w-full absolute top-[-49px] left-[102px] max-xl:hidden"
+              className="max-w-[102px] w-full absolute top-[-49px] left-[102px] max-xl:hidden pointer-events-none"
             />
             <img
               src="/assets/images/png/semicolon-bottom.png"
               alt="semicolon"
-              className="max-w-[102px] w-full absolute bottom-[-50px] right-[22rem] max-xl:hidden"
+              className="max-w-[102px] w-full absolute bottom-[-50px] right-[22rem] max-xl:hidden pointer-events-none"
             />
             <p className="font-josefin font-normal text-[40px] leading-[156%] max-lg:text-3xl max-md:text-2xl text-center max-w-[940px] mx-auto text-white">
               Gilded Games is a new type of gaming platform, partially owned and

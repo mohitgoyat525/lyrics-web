@@ -1,14 +1,13 @@
 import React from "react";
+import Heading from "../common/Heading";
 
 const Uniswap = () => {
   return (
     <div className="bg-cover bg-center bg-no-repeat bg-uniswapBg ">
-      <div className="relative flex items-center h-[885px] max-xl:h-full max-lg:flex-wrap max-w-[1920px] mx-auto max-sm:gap-5 max-xl:py-28 max-lg:py-20 max-md:py-16 max-sm:py-10">
+      <div className="relative flex items-center h-[885px] max-xl:h-full max-lg:flex-wrap max-w-[1920px] mx-auto max-lg:gap-10 max-xl:py-28 max-lg:py-20 max-md:py-16 max-sm:py-10">
         <div className="container">
           <div className="max-lg:flex max-lg:items-center max-lg:justify-center max-lg:flex-col">
-            <h2 className="text-5xl font-josefin max-lg:text-4xl max-md:text-3xl max-sm:text-2xl font-bold leading-[61.2px] text-white mb-4">
-              Buy On <span className="gradient-text">Uniswap</span>
-            </h2>
+            <Heading text='Buy on' secondaryText='Uniswap' myClass='mb-4'/>
             <ul className="list-disc ml-5">
               <li className="text-white text-xl font-normal leading-[25px] font-josefin">
                 100,000+ Airdrop
@@ -29,12 +28,12 @@ const Uniswap = () => {
         <img
           src="/assets/images/png/treassure-img.png"
           alt="treassure"
-          className="w-full max-w-[961px] absolute right-0 max-xl:max-w-[561px] max-lg:hidden"
+          className="w-full max-w-[961px] absolute right-0 max-xl:max-w-[561px] max-lg:hidden pointer-events-none"
         />
         <img
           src="/assets/images/png/md-treasure-img.png"
           alt="treasue"
-          className="lg:hidden w-full max-w-[320px] mx-auto"
+          className="lg:hidden w-full max-w-[320px] mx-auto pointer-events-none"
         />
       </div>
     </div>

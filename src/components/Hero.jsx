@@ -40,7 +40,7 @@ const Hero = () => {
       const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
       setTimeLeft({ days, hours, minutes, seconds });
     };
-   
+  //  calculateTimeLeft()
   }, []);
 
   return (

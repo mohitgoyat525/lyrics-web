@@ -1,17 +1,17 @@
 import React from "react";
 import { ROADMAP_LIST } from "../utils/helper";
+import Heading from "../common/Heading";
 
 
 function Roadmap() {
   return (
-    <div
-      id="nodes"
-      className="  bg-black mt-[-2px] mb-[-3px]"
-    >
+    <div id="nodes" className="  bg-black mt-[-2px] mb-[-3px]">
       <div className="container xl:px-0 px-3">
-        <h2 className="font-Josefin text-center font-bold sm:text-[48px] text-[40px] leading-[61.2px] text-white 2xl:pb-[115px] xl:pb-[75px] sm:pb-[36px] pb-[20px]">
-          <span className="gradient-text">Road</span>map
-        </h2>
+        <Heading
+          primaryText="Road"
+          text="map"
+          myClass="text-center 2xl:pb-[115px] xl:pb-[75px] sm:pb-[36px] pb-[20px]"
+        />
         <div className="relative xl:block hidden">
           <div
             data-aos="fade-up"
@@ -56,10 +56,10 @@ function Roadmap() {
                   <div className="flex justify-center ">
                     <div className="w-[50px] h-[50px] bg-grident-rl shadow-shadow-btn rounded-[50%] absolute left-[-27px]"></div>
                     <div className="flex flex-col relative sm:pl-[70px] pl-[38px]">
-                      <p className="font-poppins font-semibold text-lg leading-[23.22px] text-white flex">
+                      <p className="font-poppins font-semibold text-lg leading-[23.22px] text-white flex pt-5">
                         {phase.title}
                       </p>
-                      <h4 className="font-poppins font-semibold text-[36px] leading-[46.44px] text-white flex mb-3">
+                      <h4 className="font-poppins font-semibold text-[36px] max-lg:text-3xl max-md:text-2xl leading-[46.44px] text-white flex mb-3">
                         {phase.quarter}
                       </h4>
                       {phase.items.map((item, itemIndex) => (

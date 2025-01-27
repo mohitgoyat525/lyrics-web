@@ -1,13 +1,12 @@
 import React from "react";
 import { GILDED_TOKEN_LIST } from "../utils/helper";
+import Heading from "../common/Heading";
 
 const GildToken = () => {
   return (
     <div className="bg-cover bg-no-repeat bg-center bg-gildTokenBg h-[567px] max-md:h-full relative z-[111]">
       <div className="container max-lg:py-16 max-md:pb-10">
-        <h2 className="text-5xl font-josefin max-lg:text-4xl max-md:text-3xl max-sm:text-2xl text-center font-bold leading-[61.2px] text-white mb-4">
-          <span className="gradient-text">$GILD</span> Token Info
-        </h2>
+        <Heading primaryText="$GILD" text="Token Info" myClass='text-center'/>
         <div className="flex items-center gap-6 max-xl:flex-wrap max-xl:justify-center mt-[59px] max-xl:mt-10 max-lg:mt-6 max-md:mt-5">
           {GILDED_TOKEN_LIST.map((obj, i) => (
             <div
