@@ -2,7 +2,7 @@ import React from 'react'
 
 const GildedGames = () => {
     return (
-      <div className="bg-gildedBg bg-center bg-cover bg-no-repeat h-[705px] max-lg:h-full flex items-center justify-center relative z-30">
+      <div className="bg-gildedBg bg-center bg-cover bg-no-repeat h-[705px] max-xl:h-full max-xl:py-24 max-lg:py-20 max-md:py-16 max-sm:py-10 flex items-center justify-center relative z-30">
         <div className="container">
           <div className="relative w-full max-w-[1285px] mx-auto max-lg:py-20 max-md:py-16 max-sm:py-10">
             <img

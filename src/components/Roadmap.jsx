@@ -30,8 +30,8 @@ function Roadmap() {
                 </h4>
                 {phase.items.map((item, itemIndex) => (
                   <div className="flex items-center gap-4 mb-3" key={itemIndex}>
-                    <div className="w-[5px] h-[5px] bg-[#B2B2B2] rounded-[50%]"></div>
-                    <p className="font-mont font-normal text-[18px] leading-[32.4px] text-[#B2B2B2]">
+                    <div className="w-[5px] h-[5px] bg-offGray rounded-[50%]"></div>
+                    <p className="font-mont font-normal text-[18px] leading-[32.4px] text-white opacity-70 font-montserrat">
                       {item}
                     </p>
                   </div>
@@ -51,7 +51,7 @@ function Roadmap() {
               {ROADMAP_LIST.map((phase, index) => (
                 <div
                   key={index}
-                  className="border-l border-[#333333] relative gap-[30px]"
+                  className="border-l border-lightGray relative gap-[30px]"
                 >
                   <div className="flex justify-center ">
                     <div className="w-[50px] h-[50px] shadow-[0px_0px_63.22px_0px_#1BABFE] bg-grident-rl shadow-shadow-btn rounded-[50%] absolute left-[-27px]"></div>
@@ -67,8 +67,8 @@ function Roadmap() {
                           className="flex items-center gap-4"
                           key={itemIndex}
                         >
-                          <div className="w-[5px] h-[5px] bg-[#B2B2B2] rounded-[50%]"></div>
-                          <p className="font-mont font-normal text-lg leading-[32.4px] text-white opacity-70 text-start">
+                          <div className="w-[5px] h-[5px] bg-offGray rounded-[50%]"></div>
+                          <p className="font-mont font-normal text-lg leading-[32.4px] text-white opacity-70 text-start font-montserrat">
                             {item}
                           </p>
                         </div>

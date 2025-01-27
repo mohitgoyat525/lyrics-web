@@ -17,13 +17,16 @@ module.exports = {
       colors: {
         lightPurple: "#7664CD",
         lightSkyBlue: "#1BABFE",
+        lightGray: "#333333",
+        offGray: "#B2B2B2",
+        lightBrown: "#454545",
       },
       backgroundImage: {
-        "heroBg": "url('/public/assets/images/png/hero-bg-img.png')",
-        "nftBg": "url('/public/assets/images/png/nft-bg-img.png')",
-        "gildedBg": "url('/public/assets/images/png/gilded-bg-img-three.png')",
-        "gildTokenBg": "url('/public/assets/images/png/gild-bg-shadow.png')",
-        "uniswapBg": "url('/public/assets/images/png/uniswap-bg-img.png')",
+        heroBg: "url('/public/assets/images/png/hero-bg-img.png')",
+        nftBg: "url('/public/assets/images/png/nft-bg-img.png')",
+        gildedBg: "url('/public/assets/images/png/gilded-bg-img-three.png')",
+        gildTokenBg: "url('/public/assets/images/png/gild-bg-shadow.png')",
+        uniswapBg: "url('/public/assets/images/png/uniswap-bg-img.png')",
         "gradient-tb":
           "linear-gradient(to bottom, #815CC8 29.44%, #1BABFE 81.54%)",
         "grident-rl": "linear-gradient(90deg, #815CC8 0%, #1BABFE 100%)",
@@ -36,6 +39,7 @@ module.exports = {
       },
       fontFamily: {
         josefin: ["Josefin Sans", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
     },
   },
