@@ -11,12 +11,11 @@ const Hero = () => {
   });
 
   useEffect(() => {
-    
     const calculateTimeLeft = () => {
       const targetDate = new Date();
       targetDate.setHours(11, 0, 0, 0);
       if (new Date() > targetDate) {
-        targetDate.setDate(targetDate.getDate() + 1); 
+        targetDate.setDate(targetDate.getDate() + 1);
       }
 
       const now = new Date();
@@ -40,11 +39,11 @@ const Hero = () => {
       const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
       setTimeLeft({ days, hours, minutes, seconds });
     };
-  //  calculateTimeLeft()
+    //  calculateTimeLeft()
   }, []);
 
   return (
-    <div className="bg-heroBg bg-center bg-cover bg-no-repeat h-[826px] max-xl:h-full">
+    <div className="bg-hero-bg bg-center bg-cover bg-no-repeat h-[826px] max-xl:h-full">
       <div className="bg-[#000000CC] py-[21px]">
         <div className="container">
           <Header />

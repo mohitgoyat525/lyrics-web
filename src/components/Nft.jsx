@@ -4,11 +4,11 @@ import Heading from "../common/Heading";
 
 const Nft = () => {
   return (
-    <div className="bg-nftBg bg-center bg-cover bg-no-repeat h-[869px] max-lg:h-full">
+    <div className="bg-nft-bg bg-center bg-cover bg-no-repeat h-[869px] max-lg:h-full">
       <div className="container">
         <div className="flex items-center gap-[187px] max-xl:gap-24 max-lg:gap-20 max-md:gap-16 max-sm:gap-10 max-lg:flex-wrap pt-[105px] max-lg:pt-20 max-md:pt-14 max-sm:pt-10">
           <div className="w-6/12 max-lg:w-full">
-            <Heading primaryText="NFT" text="Utility" myClass='pb-4'/>
+            <Heading primaryText="NFT" text="Utility" myClass="pb-4" />
             <Description
               className="max-w-[649px] max-lg:max-w-none !text-xl max-md:!text-lg"
               title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin

@@ -3,11 +3,11 @@ import Heading from "../common/Heading";
 
 const Uniswap = () => {
   return (
-    <div className="bg-cover bg-center bg-no-repeat bg-uniswapBg ">
+    <div className="bg-cover bg-center bg-no-repeat bg-uniswap-bg ">
       <div className="relative flex items-center h-[885px] max-xl:h-full max-lg:flex-wrap max-w-[1920px] mx-auto max-lg:gap-10 max-xl:py-28 max-lg:py-20 max-md:py-16 max-sm:py-10">
         <div className="container">
           <div className="max-lg:flex max-lg:items-center max-lg:justify-center max-lg:flex-col">
-            <Heading text='Buy on' secondaryText='Uniswap' myClass='mb-4'/>
+            <Heading text="Buy on" secondaryText="Uniswap" myClass="mb-4" />
             <ul className="list-disc ml-5">
               <li className="text-white text-xl font-normal leading-[25px] font-josefin">
                 100,000+ Airdrop
