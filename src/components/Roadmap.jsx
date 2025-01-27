@@ -40,7 +40,7 @@ function Roadmap() {
             ))}
           </div>
           <img
-            className="w-full absolute top-[-25%] right-[-161px] max-w-[335px] min-[1536px]:block hidden"
+            className="w-full absolute top-[-25%] right-[-161px] max-w-[335px] min-[1636px]:block hidden"
             src="/assets/images/webp/line-roadmap.webp"
             alt="LineImg"
           />
