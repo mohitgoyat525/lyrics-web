@@ -20,7 +20,7 @@ function Roadmap() {
             {ROADMAP_LIST.map((phase, index) => (
               <div
                 key={index}
-                className="flex flex-col relative after:content-[''] after:absolute after:w-[65px] after:h-[62px] after:bg-grident-rl after:shadow-shadow-btn after:rounded-[50%] after:top-[-103px] after:z-[2]"
+                className="flex flex-col relative after:content-[''] after:absolute after:w-[65px] after:h-[62px] after:bg-grident-rl after:shadow-shadow-btn after:rounded-[50%] after:top-[-103px] after:z-[2] after:shadow-[0px_0px_63.22px_0px_#1BABFE]"
               >
                 <p className="font-semibold text-lg leading-[23.22px] text-white flex">
                   {phase.title}
@@ -54,7 +54,7 @@ function Roadmap() {
                   className="border-l border-[#333333] relative gap-[30px]"
                 >
                   <div className="flex justify-center ">
-                    <div className="w-[50px] h-[50px] bg-grident-rl shadow-shadow-btn rounded-[50%] absolute left-[-27px]"></div>
+                    <div className="w-[50px] h-[50px] shadow-[0px_0px_63.22px_0px_#1BABFE] bg-grident-rl shadow-shadow-btn rounded-[50%] absolute left-[-27px]"></div>
                     <div className="flex flex-col relative sm:pl-[70px] pl-[38px]">
                       <p className="font-poppins font-semibold text-lg leading-[23.22px] text-white flex pt-5">
                         {phase.title}
