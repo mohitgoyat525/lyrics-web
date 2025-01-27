@@ -5,7 +5,7 @@ import Heading from "../common/Heading";
 
 function Roadmap() {
   return (
-    <div id="nodes" className="  bg-black mt-[-2px] mb-[-3px]">
+    <div className="  bg-black mt-[-2px] mb-[-3px]">
       <div className="container xl:px-0 px-3">
         <Heading
           primaryText="Road"
